@@ -1,4 +1,4 @@
-# My Tennis Club Django Project
+# My shop - Django Project (to use with react front)
 
 ## Setup environment
 
