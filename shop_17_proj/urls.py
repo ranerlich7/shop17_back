@@ -10,8 +10,6 @@ from rest_framework_simplejwt import views as jwt_views
 
 router = DefaultRouter()
 router.register(r'products', ProductViewSet)
-
-
  
 urlpatterns = [
     path('admin/', admin.site.urls),
