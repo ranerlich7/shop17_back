@@ -1,3 +1,4 @@
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from .models import Product
 
@@ -7,3 +8,15 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ['id', 'name', 'price', 'image']
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        # Get the token object
+        token = super().get_token(user)
+        
+        # Add custom claims to the token payload
+        token['username'] = user.username
+        token['is_admin'] = user.is_staff  # Assuming 'is_admin' corresponds to `is_staff`
+        
+        return token
