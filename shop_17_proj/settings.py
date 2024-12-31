@@ -72,6 +72,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # Add the domains that you want to allow
     'https://anotherdomain.com',
+    'https://shop-17-v2.onrender.com'
 ]
 
 ROOT_URLCONF = 'shop_17_proj.urls'
@@ -97,6 +98,8 @@ WSGI_APPLICATION = 'shop_17_proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
+# postgresql://new_2025_shop_db_user:FWC1KCH7XB2dMwCnYzTckRyYPLfhS28v@dpg-ctpo83rqf0us73edjrs0-a.frankfurt-postgres.render.com/new_2025_shop_db
 
 DATABASES = {
     'default': {
