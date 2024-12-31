@@ -65,6 +65,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # Add the domains that you want to allow
     'https://anotherdomain.com',
+    'https://shop-17-v2.onrender.com'
 ]
 
 ROOT_URLCONF = 'shop_17_proj.urls'
